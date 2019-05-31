@@ -1,0 +1,13 @@
+<div *ngIf="isAuthenticated">
+  <h2>You are logged in.</h2>
+  <p>Here are your claims:</p>
+  <ul *ngIf="userClaims">
+    <li *ngFor="let claimKey of Object.keys(userClaims)">
+      {{claimKey}}: {{userClaims[claimKey]}}
+    </li>
+  </ul>
+</div>
+
+<div class="card" *ngIf="!isAuthenticated">
+  <h2>You are logged out.</h2>
+</div>

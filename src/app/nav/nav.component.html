@@ -1,0 +1,8 @@
+<ul>
+  <li><a routerLink="/home">Home</a></li>
+  <li><a routerLink="/user-search">User Search</a></li>
+  <li>
+    <button *ngIf="!isAuthenticated" type="button" (click)="oktaAuth.loginRedirect()">Login</button>
+    <button *ngIf="isAuthenticated" type="button" (click)="oktaAuth.logout()">Logout</button>
+  </li>
+</ul>
